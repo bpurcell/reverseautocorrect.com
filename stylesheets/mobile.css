@@ -52,11 +52,12 @@
        url('../fonts/opensans-extrabold-webfont.woff') format('woff'),
        url('../fonts/opensans-extrabold-webfont.ttf') format('truetype'),
        url('../fonts/opensans-extrabold-webfont.svg#OpenSansExtrabold') format('svg');
-  font-weight: 800;
+  font-weight: bolder;
   font-style: normal;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -70,8 +71,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -82,7 +83,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -114,24 +115,12 @@ header, footer, section {
 
 div.shell {
   display: block;
-  width: 670px;
+  width: 640px;
   margin: 0 auto;
 }
 
 a#forkme_banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 138px;
-  height: 138px;
-  display: block;
-  background: transparent url(../images/fork-sprite.png) 0 0 no-repeat;
-  text-indent: -9000px;
-  z-index: 3;
-}
-
-a#forkme_banner:hover {
-  background-position: 0 -138px;
+  display: none;
 }
 
 /* header */
@@ -139,50 +128,50 @@ a#forkme_banner:hover {
 header {
   position: relative;
   z-index: 2;
-  margin: 0 auto;
-  max-width: 600px;
-  top: 38px;
+  margin: 0;
+  max-width: 640px;
+  top: 51px;
 }
 
 header span.ribbon-inner {
   position: relative;
   display: block;
   background-color: #cd596b;
-  border: 4px solid #7c334f;
-  padding: 2px;
+  border: 8px solid #7c334f;
+  padding: 6px;
   z-index: 1;
 }
 
 header span.left-tail, header span.right-tail {
   position: relative;
   display: block;
-  width: 56px;
-  height: 105px;
-  background: transparent url(../images/ribbon-tail-sprite.png) 0 0 no-repeat;
+  width: 19px;
+  height: 10px;
+  background: transparent url(../images/ribbon-tail-sprite-2x.png) 0 0 no-repeat;
   position: absolute;
-  bottom: -37px;
+  bottom: -10px;
   z-index: 0;
 }
 
 header span.left-tail {
   background-position: 0 0;
-  left: -31px;
+  left: 0;
 }
 
 header span.right-tail {
-  background-position: -56px 0;
-  right: -31px;
+  background-position: -19px 0;
+  right: 0;
 }
 
 header h1 {
   background-color: #7c334f;
-  font-size: 2.5em;
-  font-weight: 800;
+  font-size: 2em;
+  font-weight: bolder;
   font-style: normal;
   text-transform: uppercase;
   color: #ece4d8;
   text-align: center;
-  line-height:1;
+  line-height:1;  
   padding: 14px 20px 0;
 }
 
@@ -195,91 +184,44 @@ header h2 {
   text-align: center;
 }
 
-section#downloads,
-div#no-downloads {
+section#downloads {
   position: relative;
   display: block;
-  height: 197px;
-  width: 550px;
+  height: 171px;
+  width: 602px;
   padding-bottom: 150px;
-  margin: -80px auto -150px;
+  margin: 51px auto -250px;
   z-index: 1;
-  background: transparent url(../images/bg-ramp.jpg) center 171px no-repeat;
-}
-
-div#no-downloads span.inner {
-  display: block;
-  position: relative;
-  height: 197px;
-  width: 550px;
-  background: transparent url(../images/download-sprite.png) 0 0 no-repeat;
+  background: transparent url(../images/shield.png) center 0 no-repeat;
 }
 
 section#downloads a {
-  display: block;
-  position: relative;
-  height: 67px;
-  width: 275px;
-  padding-top: 130px;
-  background: transparent url(../images/download-sprite.png) 0 0 no-repeat;
-  text-align: center;
-  line-height: 1;
-  color: #fff;
-  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
-  font-weight: 800;
-  font-size: 1.3em;
-}
-
-section#downloads a:hover {
-  text-decoration: none;
-}
-
-section#downloads a em {
-  font: bold italic 12px/1 Georgia, Times, “Times New Roman”, serif;
-  color: #83b7da;
-  display: block;
-}
-
-section#downloads a.zip {
-  float: left;
-  background-position: 0 0;
-}
-
-section#downloads a.tgz {
-  float: right;
-  background-position: -275px 0;
-}
-
-section#downloads a.zip:hover {
-  background-position: 0 -197px;
-}
-
-section#downloads a.tgz:hover {
-  background-position: -275px -197px;
+  display: none;
 }
 
 span.banner-fix {
-  background: transparent url(../images/download-fallback-bg.png) center top no-repeat;
+  background: transparent url(../images/shield-fallback.png) center top no-repeat;
   display: block;
-  height: 19px;
+  height: 31px;
   position: absolute;
-  width: 670px;
-  top: 19px;
+  width: 640px;
+  top: 20px;
+
 }
 
 section#main_content {
   z-index: 2;
-  padding: 20px 82px 0;
+  padding: 20px 40px 0;
   min-height:185px;
 }
 
 /* footer */
 
 footer {
-  background: transparent url(../images/footer-ramp.jpg) center -1px no-repeat;
+  background: none;
   padding-top: 104px;
   margin: -94px auto 40px;
-  max-width: 560px;
+  max-width:640px;
   text-align: center;
 }
 
@@ -293,15 +235,15 @@ footer span.ribbon-inner {
   position: relative;
   display: block;
   background-color: #cd596b;
-  border: 2px solid #7c334f;
-  padding: 1px;
+  border: 8px solid #7c334f;
+  padding: 6px;
   z-index: 1;
 }
 
 footer p {
-  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: .8em;
+  font-size: .6em;
   color: #8b786f;
 }
 
@@ -313,19 +255,23 @@ footer span.ribbon-inner p {
   background-color: #7c334f;
   margin: 0;
   color: #e69b95;
-  font: bold italic 12px/1 Georgia, Times, “Times New Roman”, serif;
-  padding-bottom:4px;
+  font: bold italic 22px/1 Georgia, Times, “Times New Roman”, serif;
+  height: auto;
+  line-height: 1.1;
+  padding: 20px 0px 10px;
 }
 
 footer span.ribbon-inner a {
+  display: block;
   position: relative;
-  bottom: -1px;
+  bottom: 0;
   color: #7eb0d2;
-  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   font-style: normal;
-  font-weight: 800;
-  font-size: 1.2em;
+  font-weight: bolder;
+  font-size: 38px;
+  padding-bottom: 10px;
 }
 
 footer span.ribbon-inner a:hover {
@@ -335,37 +281,36 @@ footer span.ribbon-inner a:hover {
 footer span.left-tail, footer span.right-tail {
   position: relative;
   display: block;
-  width: 18px;
-  height: 29px;
-  background: transparent url(../images/small-ribbon-tail-sprite.png) 0 0 no-repeat;
+  width: 23px;
+  height: 126px;
+  background: transparent url(../images/small-ribbon-tail-sprite-2x.png) 0 0 no-repeat;
   position: absolute;
-  bottom: 5px;
+  top: -126px;
   z-index: 0;
 }
 
 footer span.left-tail {
   background-position: 0 0;
-  left: -11px;
+  left: 0;
 }
 
 footer span.right-tail {
-  background-position: -18px 0;
-  right: -11px;
+  background-position: -23px 0;
+  right: 0;
 }
 
 footer span.octocat {
-  background: transparent url(../images/octocat.png) 0 0 no-repeat;
+  background: transparent url(../images/octocat-2x.png) 0 0 no-repeat;
   display: block;
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-}
+  width: 60px;
+  height: 60px;
+  margin: 20px auto 0;}
 
 /* content */
 
 body {
   background: #ece4d8;
-  font: normal normal 15px/1.5 Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
+  font: normal normal 30px/1.5 Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
   color: #544943;
   -webkit-font-smoothing: antialiased;
 }
@@ -383,12 +328,12 @@ a:hover {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
 
 p {
-  margin: .7em 0;
+  margin: .7em 0 0;
 }
 
 strong {
@@ -411,37 +356,37 @@ ul {
 }
 
 ul li {
-  padding-left: 10px;
-  background: transparent url(../images/chevron.png) left 6px no-repeat;
+  padding-left: 20px;
+  background: transparent url(../images/chevron-2x.png) left 15px no-repeat;
 }
 
 blockquote {
-  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 20px 0;
   color: #8b786f;
   padding-left: 1.35em;
-  background: transparent url('../images/blockquote-gfx.png') 0 4px no-repeat;
+  background: transparent url('../images/blockquote-gfx-2x.png') 0 8px no-repeat;
 }
 
 img {
-  -webkit-box-shadow: 0px 2px 0px #bdb6ad;
-  -moz-box-shadow: 0px 2px 0px #bdb6ad;
-  box-shadow: 0px 2px 0px #bdb6ad;
-  border: 2px solid #fff6e9;
-  max-width: 502px;
+  -webkit-box-shadow: 0px 4px 0px #bdb6ad;
+  -moz-box-shadow: 0px 4px 0px #bdb6ad;
+  box-shadow: 0px 4px 0px #bdb6ad;
+  border: 4px solid #fff6e9;
+  max-width: 556px;
 }
 
 hr {
   border: none;
   outline: none;
-  height: 18px;
-  background: transparent url('../images/hr.jpg') center center repeat-x;
+  height: 42px;
+  background: transparent url('../images/hr-2x.jpg') center center repeat-x;
   margin: 0 0 20px;
 }
 
 code {
   background: #fff6e9;
-  font: normal normal .8em/1.7 "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  font: normal normal .9em/1.7 "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
   padding: 0 5px 1px;
 }
 
@@ -449,13 +394,9 @@ pre {
   margin: 10px 0 20px;
   padding: .7em;
   background: #fff6e9;
-  border-bottom: 2px solid #bdb6ad;
+  border-bottom: 4px solid #bdb6ad;
   font: normal normal .9em/1.7 "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
   overflow: auto;
-}
-
-pre code {
-  padding: 0;
 }
 
 table {
@@ -463,7 +404,7 @@ table {
   display: table;
   width: 100%;
   border-collapse: separate;
-  border-bottom: 2px solid #bdb6ad;
+  border-bottom: 4px solid #bdb6ad;
   margin: 10px 0;
 }
 
@@ -475,9 +416,9 @@ th {
   display: table-cell;
   padding: 2px 10px;
   border: solid #ece4d8;
-  border-width: 0 2px 2px 0;
+  border-width: 0 4px 4px 0;
   color: #cd596b;
-  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: .85em;
 }
@@ -486,7 +427,7 @@ td {
   display: table-cell;
   padding: 0 .7em;
   border: solid #ece4d8;
-  border-width: 0 2px 2px 0;
+  border-width: 0 4px 4px 0;
 }
 
 td:last-child, th:last-child {
@@ -502,7 +443,7 @@ dl {
 }
 
 dt {
-  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
 
