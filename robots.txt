@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://bpurcell.github.io/reverseautocorrect/sitemap.xml 
