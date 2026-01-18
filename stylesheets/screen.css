@@ -585,3 +585,119 @@ input {
 	input:-moz-placeholder {
 	    color: #a1b2c3; text-shadow: 0px -1px 0px #38506b; 
 	}
+
+/* Reverse AutoCorrect Suggestions */
+#suggestions {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    min-height: 50px;
+}
+
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestion-item {
+    padding: 15px;
+    margin: 10px 0;
+    background: white;
+    border-left: 4px solid #ccc;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.suggestion-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.suggestion-prefix {
+    font-weight: bold;
+    color: #555;
+}
+
+.suggestion-text {
+    font-style: italic;
+    color: #333;
+    background: #fffacd;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin: 0 4px;
+}
+
+.suggestion-comment {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Progressive escalation styles */
+.suggestion-item[data-level="0"],
+.suggestion-item[data-level="1"] {
+    border-left-color: #4CAF50;
+}
+
+.suggestion-item[data-level="2"],
+.suggestion-item[data-level="3"] {
+    border-left-color: #2196F3;
+}
+
+.suggestion-item[data-level="4"],
+.suggestion-item[data-level="5"] {
+    border-left-color: #FF9800;
+}
+
+.suggestion-item[data-level="5"] .suggestion-prefix,
+.suggestion-item[data-level="6"] .suggestion-prefix {
+    color: #E65100;
+}
+
+.suggestion-item[data-level="6"],
+.suggestion-item[data-level="7"] {
+    border-left-color: #F44336;
+    border-left-width: 6px;
+}
+
+.suggestion-item[data-level="7"] .suggestion-prefix,
+.suggestion-item[data-level="8"] .suggestion-prefix,
+.suggestion-item[data-level="9"] .suggestion-prefix {
+    color: #D32F2F;
+    font-size: 18px;
+}
+
+.suggestion-item[data-level="8"],
+.suggestion-item[data-level="9"] {
+    border-left-color: #B71C1C;
+    border-left-width: 8px;
+    background: #FFEBEE;
+}
+
+.suggestion-item[data-level="9"] {
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+}
+
+.suggestion-item[data-level="9"] .suggestion-prefix {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.suggestion-item[data-level="9"] .suggestion-comment {
+    color: #B71C1C;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
